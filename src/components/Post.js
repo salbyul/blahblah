@@ -8,6 +8,7 @@ function Post() {
                         Head of Post
                     </h1>
                     <div className=" text-gray-400 ml-2">tag</div>
+                    <div className=" text-gray-400 ml-2">{Date.now()}</div>
                 </div>
                 <div className=" text-lg text-gray-200 ml-2 mt-4">
                     Contents of Post

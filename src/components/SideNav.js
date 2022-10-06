@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function SideNav() {
     return (
         <div
@@ -13,7 +15,9 @@ function SideNav() {
             <div className="text-slate-300">
                 <div className="my-4">
                     <p className="text-center text-green-100 mb-2">Learned</p>
-                    <button className=" my-1">Example1 (20)</button>
+                    <Link to="/blahblah/java">
+                        <button className=" my-1">Java (1)</button>
+                    </Link>
                 </div>
                 <div className="my-4">
                     <p className="text-center text-yellow-100 mb-2">Project</p>
