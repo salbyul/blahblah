@@ -26,7 +26,7 @@ function Post() {
                         {post.title}
                     </h1>
                     <div className="text-gray-200 my-1 text-center">
-                        {post.subtitle}
+                        [{post.subtitle}]
                     </div>
                     <div className=" text-gray-400">{post.date}</div>
                 </div>
