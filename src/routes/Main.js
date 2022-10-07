@@ -1,9 +1,9 @@
-import EmptyPost from '../components/EmptyPost';
+import MainPost from '../components/MainPost';
 
 function Main() {
     return (
         <div className=" flex mt-32 justify-center">
-            <EmptyPost />
+            <MainPost />
         </div>
     );
 }

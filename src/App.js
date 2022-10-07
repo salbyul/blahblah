@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Post from './components/Post';
 import SideNav from './components/SideNav';
 import Main from './routes/Main';
 import PostList from './routes/PostList';
@@ -17,12 +18,21 @@ function App() {
                     }
                 />
                 <Route
-                    path="/blahblah/:tab"
+                    path="/blahblah/:subject"
                     element={
                         <>
                             <SideNav />
                             <PostList />
                         </>
+                    }
+                />
+                <Route
+                    path="/blahblah/:subject/:id"
+                    element={
+                        <div className="flex mt-32 justify-center">
+                            <SideNav />
+                            <Post />
+                        </div>
                     }
                 />
             </Routes>
