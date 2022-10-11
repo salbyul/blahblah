@@ -29,10 +29,10 @@ function App() {
                 <Route
                     path="/blahblah/:subject/:id"
                     element={
-                        <div className="flex mt-32 justify-center">
+                        <>
                             <SideNav />
                             <Post />
-                        </div>
+                        </>
                     }
                 />
             </Routes>

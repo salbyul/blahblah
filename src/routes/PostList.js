@@ -15,23 +15,28 @@ function PostList() {
         }
     }, [param]);
     return (
-        <div className=" flex mt-32 justify-center">
-            <div className=" bg-gray-500 w-4/12 ml-1 rounded-lg h-fit mb-8">
-                {subject.map((post) => {
-                    return (
-                        <ShortPost
-                            key={post.id}
-                            id={post.id}
-                            title={post.title}
-                            subtitle={post.subtitle}
-                            date={post.date}
-                            contents={post.contents}
-                            tag={param}
-                        />
-                    );
-                })}
+        <>
+            <div className=" flex justify-center">
+                <div
+                    className="w-4/12 rounded-lg h-fit my-20"
+                    style={{ background: '#1b1b1e' }}
+                >
+                    {subject.map((post) => {
+                        return (
+                            <ShortPost
+                                key={post.id}
+                                id={post.id}
+                                title={post.title}
+                                subtitle={post.subtitle}
+                                date={post.date}
+                                contents={post.contents}
+                                tag={param}
+                            />
+                        );
+                    })}
+                </div>
             </div>
-        </div>
+        </>
     );
 }
 

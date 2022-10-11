@@ -4,7 +4,7 @@ function ShortPost({ title, subtitle, date, contents, tag, id }) {
     const postPath = `/blahblah/${tag}/${id}`;
     return (
         <Link to={postPath}>
-            <div className="hover:bg-gray-600 border-y-2 rounded-lg border-gray-400">
+            <div className="hover:bg-gray-700 border-y-2 rounded-lg border-gray-400">
                 <div className="ml-4 my-8 py-3">
                     <div className=" text-4xl text-gray-200">{title}</div>
                     <div className="text-gray-200 my-1">[{subtitle}]</div>
