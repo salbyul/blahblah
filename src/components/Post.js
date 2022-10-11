@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { data as java } from '../data/Java';
+import Contents from './Contents';
 
 function Post() {
     const [post, setPost] = useState({});
@@ -58,6 +59,10 @@ function Post() {
                                             />
                                         );
                                 })}
+                            ----------------------
+                            {post.contents && (
+                                <Contents contents={post.contents} />
+                            )}
                         </div>
                     </div>
                 </div>
