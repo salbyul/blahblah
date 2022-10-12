@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ShortPost from '../components/ShortPost';
 import { data as java } from '../data/Java';
+import { data as book } from '../data/Book';
 
 function PostList() {
     const [subject, setSubject] = useState([]);
@@ -10,6 +11,9 @@ function PostList() {
         switch (param) {
             case 'java':
                 setSubject(java);
+                break;
+            case 'book':
+                setSubject(book);
                 break;
             default:
         }
@@ -30,7 +34,8 @@ function PostList() {
                                 subtitle={post.subtitle}
                                 date={post.date}
                                 contents={post.contents}
-                                tag={param}
+                                param={param}
+                                tagList={post.tag}
                             />
                         );
                     })}

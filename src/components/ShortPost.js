@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
-function ShortPost({ title, subtitle, date, contents, tag, id }) {
-    const postPath = `/blahblah/${tag}/${id}`;
+function ShortPost({ title, subtitle, date, contents, param, id, tagList }) {
+    const postPath = `/blahblah/${param}/${id}`;
     return (
         <Link to={postPath}>
             <div className="hover:bg-gray-700 border-y-2 rounded-lg border-gray-400">
@@ -12,10 +12,14 @@ function ShortPost({ title, subtitle, date, contents, tag, id }) {
                         {date}
                     </div>
                     <div className="text-xl text-gray-300">
-                        {contents.map((content) => {
+                        {tagList.map((tag) => {
                             let result;
-                            typeof content === 'string'
-                                ? (result = content)
+                            typeof tag === 'string'
+                                ? (result = (
+                                      <span className="text-blue-300" key={tag}>
+                                          #{tag}{' '}
+                                      </span>
+                                  ))
                                 : (result = '');
                             return result;
                         })}

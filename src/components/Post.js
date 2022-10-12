@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { data as java } from '../data/Java';
+import { data as book } from '../data/Book';
 import Contents from './Contents';
 
 function Post() {
@@ -13,6 +14,9 @@ function Post() {
             case 'java':
                 setPost(java[id - 1]);
                 break;
+            case 'book':
+                setPost(book[id - 1]);
+                break;
             default:
         }
     }, [id, subject]);
@@ -20,7 +24,7 @@ function Post() {
         <>
             <div className="flex justify-center">
                 <div
-                    className="w-4/12 h-screen my-20 border-2 rounded-lg border-gray-400 p-12"
+                    className="w-5/12 h-screen my-20 border-2 rounded-lg border-gray-400 p-12"
                     style={{ background: '#1b1b1e' }}
                 >
                     <div className=" h-12 border-b-2 hidden">

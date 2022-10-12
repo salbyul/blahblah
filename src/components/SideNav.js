@@ -1,5 +1,6 @@
 import { Link, useParams } from 'react-router-dom';
 import { data as java } from '../data/Java';
+import { data as book } from '../data/Book';
 
 function SideNav() {
     const subject = useParams().subject;
@@ -28,6 +29,16 @@ function SideNav() {
                             } text-2xl`}
                         >
                             Java ({java.length})
+                        </button>
+                    </Link>
+                    <br />
+                    <Link to="/blahblah/book">
+                        <button
+                            className={`my-1 ${
+                                subject === 'book' ? '' : 'text-gray-500'
+                            } text-2xl`}
+                        >
+                            Book ({book.length})
                         </button>
                     </Link>
                 </div>
